@@ -9,7 +9,7 @@ import UIKit
 
 class ResultViewController: UIViewController {
     
-    @IBOutlet var animalTypeLabel: UILabel!
+    @IBOutlet var animalTypeLabel: UIImage!
     @IBOutlet var descriptionLabel: UILabel!
     
     var answers: [Answer]!
@@ -68,7 +68,7 @@ extension ResultViewController {
     }
     
     private func updateUI(with animal: Animal) {
-//        animalTypeLabel.
+        animalTypeLabel = animal.image
         descriptionLabel.text = animal.definition
     }
 }

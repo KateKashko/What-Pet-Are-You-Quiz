@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Questions View Controller-->
+        <!--Question View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="QuestionsViewController" customModule="What_Pet_Are_You__Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="QuestionViewController" customModule="What_Pet_Are_You__Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -79,7 +79,7 @@
         <!--Quiz №-->
         <scene sceneID="kGu-QX-79Q">
             <objects>
-                <viewController id="Gvs-GN-bdd" customClass="QuestionsViewController" customModule="What_Pet_Are_You__Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Gvs-GN-bdd" customClass="QuestionViewController" customModule="What_Pet_Are_You__Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DX3-fl-XVr">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -310,8 +310,9 @@
                     <navigationItem key="navigationItem" title="Quiz №" id="gom-WJ-P3B"/>
                     <connections>
                         <outlet property="multipleStackView" destination="MOV-cq-oUN" id="sWt-U7-gtk"/>
-                        <outlet property="questionLabel" destination="Orf-JQ-EZI" id="jHp-ug-Tne"/>
+                        <outlet property="questionLabel" destination="Orf-JQ-EZI" id="U18-lm-aCn"/>
                         <outlet property="questionProgressView" destination="IuP-dr-hMS" id="Xji-9c-nwz"/>
+                        <outlet property="questionsProgressView" destination="IuP-dr-hMS" id="jjp-7O-xJv"/>
                         <outlet property="rangedSlider" destination="JvH-77-a4U" id="2jW-Kt-1iv"/>
                         <outlet property="rangedStackView" destination="YRD-Jr-5V4" id="eA8-lC-YLP"/>
                         <outlet property="singleStackView" destination="bHb-xy-cU6" id="O3V-yt-sMX"/>
@@ -329,7 +330,7 @@
                         <outletCollection property="multipleSwitches" destination="T2y-zt-mLZ" collectionClass="NSMutableArray" id="fcO-rU-eIm"/>
                         <outletCollection property="rangedLabels" destination="HIW-Y2-9AU" collectionClass="NSMutableArray" id="XTs-g9-nfs"/>
                         <outletCollection property="rangedLabels" destination="eIj-Wz-YQM" collectionClass="NSMutableArray" id="Bzi-Ee-HgM"/>
-                        <segue destination="WyT-AG-Na3" kind="show" identifier="showResult" id="ycC-NF-f4k"/>
+                        <segue destination="WyT-AG-Na3" kind="show" id="ycC-NF-f4k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ud7-nC-Cu8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -9,8 +9,8 @@ import UIKit
 
 final class QuestionsViewController: UIViewController {
 
-        @IBOutlet var questionLabel: UILabel!
-        @IBOutlet var questionProgressView: UIProgressView!
+    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var questionProgressView: UIProgressView!
         
         @IBOutlet var singleStackView: UIStackView!
         @IBOutlet var singleButtons: [UIButton]!
