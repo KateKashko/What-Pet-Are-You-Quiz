@@ -17,23 +17,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acz-qy-Dz3">
-                                <rect key="frame" x="123" y="267" width="75" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <segue destination="Gje-5d-NRT" kind="presentation" modalPresentationStyle="fullScreen" id="NSC-mB-DLF"/>
-                                </connections>
-                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="meY-1S-x9o">
+                                <rect key="frame" x="-380" y="0.0" width="1080" height="568"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="7PI-i1-Rm9">
+                                <rect key="frame" x="36" y="50" width="248" height="468"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="CatDog" translatesAutoresizingMaskIntoConstraints="NO" id="qz9-4d-3lP">
+                                        <rect key="frame" x="5" y="0.0" width="238" height="125.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="qz9-4d-3lP" secondAttribute="height" multiplier="1.89:1" id="qYf-5N-pVc"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="WhatPetAreYou" translatesAutoresizingMaskIntoConstraints="NO" id="kxd-qU-Piq">
+                                        <rect key="frame" x="5" y="126.5" width="238" height="132"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="kxd-qU-Piq" secondAttribute="height" multiplier="1.81:1" id="r9i-Tu-TxP"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acz-qy-Dz3">
+                                        <rect key="frame" x="11" y="259.5" width="226" height="79"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Start The Quiz">
+                                            <fontDescription key="titleFontDescription" name="Palatino-Bold" family="Palatino" pointSize="30"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="Gje-5d-NRT" kind="presentation" modalPresentationStyle="fullScreen" id="NSC-mB-DLF"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="RubbitTurtle" translatesAutoresizingMaskIntoConstraints="NO" id="idZ-mF-yXG">
+                                        <rect key="frame" x="0.0" y="339.5" width="248" height="128.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="idZ-mF-yXG" secondAttribute="height" multiplier="1.93:1" id="sdw-pc-es9"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="kxd-qU-Piq" firstAttribute="height" secondItem="7PI-i1-Rm9" secondAttribute="height" multiplier="0.269366" constant="5.656690140845086" id="NZ9-tJ-ZGp"/>
+                                    <constraint firstItem="idZ-mF-yXG" firstAttribute="height" secondItem="7PI-i1-Rm9" secondAttribute="height" multiplier="0.262324" constant="5.5088028169014081" id="NgT-H5-qCR"/>
+                                    <constraint firstItem="qz9-4d-3lP" firstAttribute="height" secondItem="7PI-i1-Rm9" secondAttribute="height" multiplier="0.257042" constant="5.397887323943678" id="vlg-ce-Ahz"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7PI-i1-Rm9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LXI-0n-43I"/>
+                            <constraint firstItem="7PI-i1-Rm9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="50" id="cnH-Gw-dMC"/>
+                            <constraint firstAttribute="bottom" secondItem="7PI-i1-Rm9" secondAttribute="bottom" constant="50" id="hMp-qR-ebP"/>
+                            <constraint firstItem="meY-1S-x9o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="poY-9C-811"/>
+                            <constraint firstItem="meY-1S-x9o" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="wog-eJ-vDW"/>
+                            <constraint firstAttribute="bottom" secondItem="meY-1S-x9o" secondAttribute="bottom" id="yaq-kf-bD5"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="102" y="4"/>
+            <point key="canvasLocation" x="99.375" y="2.112676056338028"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="kGu-QX-79Q">
@@ -86,6 +127,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1" width="1080" height="1920"/>
+        <image name="CatDog" width="1080" height="543"/>
+        <image name="RubbitTurtle" width="1080" height="555"/>
+        <image name="WhatPetAreYou" width="885" height="490"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
