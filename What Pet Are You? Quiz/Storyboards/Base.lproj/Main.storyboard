@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Question View Controller-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="QuestionViewController" customModule="What_Pet_Are_You__Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,7 +43,7 @@
                                             <fontDescription key="titleFontDescription" name="Palatino-Bold" family="Palatino" pointSize="30"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="Gje-5d-NRT" kind="presentation" modalPresentationStyle="fullScreen" id="NSC-mB-DLF"/>
+                                            <segue destination="Gje-5d-NRT" kind="presentation" modalPresentationStyle="fullScreen" id="SXU-r1-Gh7"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="RubbitTurtle" translatesAutoresizingMaskIntoConstraints="NO" id="idZ-mF-yXG">
@@ -79,7 +79,7 @@
         <!--Quiz №-->
         <scene sceneID="kGu-QX-79Q">
             <objects>
-                <viewController id="Gvs-GN-bdd" customClass="QuestionViewController" customModule="What_Pet_Are_You__Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Gvs-GN-bdd" customClass="QuestionsViewController" customModule="What_Pet_Are_You__Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DX3-fl-XVr">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -109,14 +109,14 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="YRD-Jr-5V4" userLabel="Ranged Stack View">
-                                <rect key="frame" x="4.6666666666666572" y="339.33333333333331" width="384" height="173.33333333333331"/>
+                                <rect key="frame" x="-1.6666666666666572" y="339.33333333333331" width="396.33333333333326" height="173.33333333333331"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="JvH-77-a4U">
-                                        <rect key="frame" x="-2" y="0.0" width="388" height="31"/>
+                                        <rect key="frame" x="-2" y="0.0" width="400.33333333333331" height="31"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </slider>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="Vc6-ZU-eRT">
-                                        <rect key="frame" x="56" y="67" width="272" height="27.666666666666671"/>
+                                        <rect key="frame" x="62.333333333333314" y="67" width="272" height="27.666666666666671"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIW-Y2-9AU">
                                                 <rect key="frame" x="0.0" y="0.0" width="61" height="27.666666666666668"/>
@@ -133,7 +133,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TjJ-Hq-Bah">
-                                        <rect key="frame" x="142.33333333333334" y="131.66666666666669" width="99" height="41.666666666666657"/>
+                                        <rect key="frame" x="148.66666666666666" y="131.66666666666669" width="99" height="41.666666666666657"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button">
@@ -300,12 +300,6 @@
                             <constraint firstItem="8e6-q5-kMo" firstAttribute="trailing" secondItem="Orf-JQ-EZI" secondAttribute="trailing" constant="16" id="soI-bf-8Eb"/>
                             <constraint firstItem="MOV-cq-oUN" firstAttribute="leading" secondItem="8e6-q5-kMo" secondAttribute="leading" constant="16" id="xOF-bO-8Lp"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="YRD-Jr-5V4"/>
-                                <exclude reference="MOV-cq-oUN"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Quiz №" id="gom-WJ-P3B"/>
                     <connections>
@@ -330,7 +324,7 @@
                         <outletCollection property="multipleSwitches" destination="T2y-zt-mLZ" collectionClass="NSMutableArray" id="fcO-rU-eIm"/>
                         <outletCollection property="rangedLabels" destination="HIW-Y2-9AU" collectionClass="NSMutableArray" id="XTs-g9-nfs"/>
                         <outletCollection property="rangedLabels" destination="eIj-Wz-YQM" collectionClass="NSMutableArray" id="Bzi-Ee-HgM"/>
-                        <segue destination="WyT-AG-Na3" kind="show" id="ycC-NF-f4k"/>
+                        <segue destination="WyT-AG-Na3" kind="show" identifier="showResult" id="ycC-NF-f4k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ud7-nC-Cu8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
