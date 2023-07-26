@@ -23,8 +23,8 @@ class ResultViewController: UIViewController {
         print(time)
     }
     
-    @IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {
-         dismiss(animated: true)
+    @IBAction func doneButton(_ sender: UIBarButtonItem) {
+        dismiss(animated: true)
     }
 }
 

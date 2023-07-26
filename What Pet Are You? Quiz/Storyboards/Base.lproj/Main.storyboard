@@ -94,12 +94,12 @@
                                 <rect key="frame" x="0.0" y="96" width="393" height="4"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Orf-JQ-EZI" userLabel="Question Label">
-                                <rect key="frame" x="16" y="120" width="361" height="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Orf-JQ-EZI" userLabel="Question Label">
+                                <rect key="frame" x="16" y="120" width="361" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="KCg-i2-PHW"/>
+                                    <constraint firstAttribute="height" constant="70" id="KCg-i2-PHW"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
@@ -109,14 +109,14 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="YRD-Jr-5V4" userLabel="Ranged Stack View">
-                                <rect key="frame" x="-1.6666666666666572" y="339.33333333333331" width="396.33333333333326" height="173.33333333333331"/>
+                                <rect key="frame" x="-19.666666666666657" y="339.33333333333331" width="432.33333333333326" height="173.33333333333331"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="JvH-77-a4U">
-                                        <rect key="frame" x="-2" y="0.0" width="400.33333333333331" height="31"/>
+                                        <rect key="frame" x="-2" y="0.0" width="436.33333333333331" height="31"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </slider>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="Vc6-ZU-eRT">
-                                        <rect key="frame" x="62.333333333333314" y="67" width="272" height="27.666666666666671"/>
+                                        <rect key="frame" x="80.333333333333314" y="67" width="272" height="27.666666666666671"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIW-Y2-9AU">
                                                 <rect key="frame" x="0.0" y="0.0" width="61" height="27.666666666666668"/>
@@ -133,10 +133,10 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TjJ-Hq-Bah">
-                                        <rect key="frame" x="148.66666666666666" y="131.66666666666669" width="99" height="41.666666666666657"/>
+                                        <rect key="frame" x="177.33333333333331" y="131.66666666666669" width="78" height="41.666666666666657"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button">
+                                        <buttonConfiguration key="configuration" style="plain" title="Next">
                                             <fontDescription key="titleFontDescription" name="Palatino-Roman" family="Palatino" pointSize="25"/>
                                         </buttonConfiguration>
                                         <connections>
@@ -305,8 +305,7 @@
                     <connections>
                         <outlet property="multipleStackView" destination="MOV-cq-oUN" id="sWt-U7-gtk"/>
                         <outlet property="questionLabel" destination="Orf-JQ-EZI" id="U18-lm-aCn"/>
-                        <outlet property="questionProgressView" destination="IuP-dr-hMS" id="Xji-9c-nwz"/>
-                        <outlet property="questionsProgressView" destination="IuP-dr-hMS" id="jjp-7O-xJv"/>
+                        <outlet property="questionProgressView" destination="IuP-dr-hMS" id="Uxq-3e-szf"/>
                         <outlet property="rangedSlider" destination="JvH-77-a4U" id="2jW-Kt-1iv"/>
                         <outlet property="rangedStackView" destination="YRD-Jr-5V4" id="eA8-lC-YLP"/>
                         <outlet property="singleStackView" destination="bHb-xy-cU6" id="O3V-yt-sMX"/>
@@ -384,12 +383,16 @@
                     <navigationItem key="navigationItem" title="Result" id="2ZW-3o-K3W">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="0R5-U1-Dtt">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="doneButton:" destination="Y9J-Sr-Rwy" id="dbW-gx-rP3"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tX7-1Q-SH0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Y9J-Sr-Rwy" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2672.5190839694656" y="0.70422535211267612"/>
+            <point key="canvasLocation" x="2619" y="1"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Jtl-04-gjZ">
